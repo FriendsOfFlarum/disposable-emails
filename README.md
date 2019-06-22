@@ -31,7 +31,7 @@ composer update fof/disposable-emails
 [<img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" height="25" />](https://patreon.com/datitisev)
 
 - [Packagist](https://packagist.org/packages/fof/disposable-emails)
-- [GitHub](https://githbu.com/FriendsOfFlarum/disposable-emails)
+- [GitHub](https://github.com/FriendsOfFlarum/disposable-emails)
 
 An extension by [FriendsOfFlarum](https://github.com/FriendsOfFlarum).
 
