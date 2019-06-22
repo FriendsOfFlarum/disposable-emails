@@ -18,7 +18,7 @@ use Illuminate\Events\Dispatcher;
 use MailChecker;
 
 return [
-    new Extend\Locales(__DIR__ . '/locale'),
+    new Extend\Locales(__DIR__.'/locale'),
     new Extend\Compat(function (Dispatcher $events) {
         $events->listen(Saving::class, function (Saving $event) {
             $email = array_get($event->data, 'attributes.email');
@@ -29,5 +29,5 @@ return [
                 ]);
             }
         });
-    })
+    }),
 ];
