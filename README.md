@@ -8,6 +8,7 @@ A [Flarum](http://flarum.org) extension. Prevent users from signing up with disp
   <summary>Screenshots</summary>
   
   <img src="https://i.imgur.com/vCceWZb.png" alt="sign up modal" width="300" />
+  <img src="https://i.imgur.com/x0iEi5l.png" alt="edit user modal" width="300" />
 </details>
 
 
