@@ -7,8 +7,8 @@
   "type": "flarum-extension",
   "license": "MIT",
   "require": {
-    "flarum/core": "^0.1.0-beta.8",
-    "fgribreau/mailchecker": "^3.2.33"
+    "flarum/core": "^0.1.0-beta.14",
+    "fgribreau/mailchecker": "^3.3.17"
   },
   "authors": [
     {

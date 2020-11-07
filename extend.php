@@ -15,13 +15,14 @@ use Flarum\Extend;
 use Flarum\Foundation\ValidationException;
 use Flarum\User\Event\Saving;
 use Illuminate\Events\Dispatcher;
+use Illuminate\Support\Arr;
 use MailChecker;
 
 return [
     new Extend\Locales(__DIR__.'/locale'),
-    new Extend\Compat(function (Dispatcher $events) {
+    function (Dispatcher $events) {
         $events->listen(Saving::class, function (Saving $event) {
-            $email = array_get($event->data, 'attributes.email');
+            $email = Arr::get($event->data, 'attributes.email');
 
             if ($email !== null && !MailChecker::isValid($email)) {
                 throw new ValidationException([
@@ -29,5 +30,5 @@ return [
                 ]);
             }
         });
-    }),
+    },
 ];
