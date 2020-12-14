@@ -14,14 +14,14 @@ namespace FoF\DisposableEmails;
 use Flarum\Extend;
 use Flarum\Foundation\ValidationException;
 use Flarum\User\Event\Saving;
-use Illuminate\Events\Dispatcher;
 use Illuminate\Support\Arr;
 use MailChecker;
 
 return [
     new Extend\Locales(__DIR__.'/locale'),
-    function (Dispatcher $events) {
-        $events->listen(Saving::class, function (Saving $event) {
+
+    (new Extend\Event())
+        ->listen(Saving::class, function (Saving $event) {
             $email = Arr::get($event->data, 'attributes.email');
 
             if ($email !== null && !MailChecker::isValid($email)) {
@@ -29,6 +29,5 @@ return [
                     app('translator')->trans('fof-email-checker.error.disposable_email_message'),
                 ]);
             }
-        });
-    },
+        }),
 ];
