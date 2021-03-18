@@ -26,7 +26,7 @@ return [
 
             if ($email !== null && !MailChecker::isValid($email)) {
                 throw new ValidationException([
-                    app('translator')->trans('fof-email-checker.error.disposable_email_message'),
+                    resolve('translator')->trans('fof-email-checker.error.disposable_email_message'),
                 ]);
             }
         }),
