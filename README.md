@@ -4,6 +4,8 @@
 
 A [Flarum](http://flarum.org) extension. Prevent users from signing up with disposable emails.
 
+The full list of disposable email domains blocked by this extension can be found [here](https://github.com/FGRibreau/mailchecker/blob/master/list.txt)
+
 <details> 
   <summary>Screenshots</summary>
   
@@ -12,12 +14,14 @@ A [Flarum](http://flarum.org) extension. Prevent users from signing up with disp
 </details>
 
 
+
+
 ### Installation
 
-Use [Bazaar](https://discuss.flarum.org/d/5151-flagrow-bazaar-the-extension-marketplace) or install manually with composer:
+Install with composer:
 
 ```sh
-composer require fof/disposable-emails
+composer require fof/disposable-emails:"*"
 ```
 
 ### Updating
