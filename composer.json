@@ -9,7 +9,7 @@
   "support": {
     "issues": "https://github.com/FriendsOfFlarum/disposabile-emails/issues",
     "source": "https://github.com/FriendsOfFlarum/disposable-emails",
-    "forum": "https://discuss.flarum.org/d/21894"
+    "forum": "https://discuss.flarum.org/d/20457"
   },
   "homepage": "https://friendsofflarum.org",
   "funding": [
@@ -45,7 +45,7 @@
       }
     },
     "flagrow": {
-      "discuss": "https://discuss.flarum.org/d/20457-friendsofflarum-disposable-emails"
+      "discuss": "https://discuss.flarum.org/d/20457"
     }
   }
 }
