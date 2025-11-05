@@ -37,11 +37,11 @@ class DisposableEmailValidationTest extends TestCase
                 '/api/users',
                 [
                     'authenticatedAs' => 1,
-                    'json' => [
+                    'json'            => [
                         'data' => [
                             'attributes' => [
-                                'username' => 'testuser' . rand(1000, 9999),
-                                'email' => $email,
+                                'username' => 'testuser'.rand(1000, 9999),
+                                'email'    => $email,
                                 'password' => 'password123',
                             ],
                         ],
@@ -80,11 +80,11 @@ class DisposableEmailValidationTest extends TestCase
                 '/api/users',
                 [
                     'authenticatedAs' => 1,
-                    'json' => [
+                    'json'            => [
                         'data' => [
                             'attributes' => [
-                                'username' => 'user' . substr(md5($email), 0, 20),
-                                'email' => $email,
+                                'username' => 'user'.substr(md5($email), 0, 20),
+                                'email'    => $email,
                                 'password' => 'password123',
                             ],
                         ],
@@ -111,10 +111,10 @@ class DisposableEmailValidationTest extends TestCase
                 '/api/users/2',
                 [
                     'authenticatedAs' => 1,
-                    'json' => [
+                    'json'            => [
                         'data' => [
-                            'type' => 'users',
-                            'id' => '2',
+                            'type'       => 'users',
+                            'id'         => '2',
                             'attributes' => [
                                 'email' => 'spam@yopmail.com',
                             ],
@@ -159,10 +159,10 @@ class DisposableEmailValidationTest extends TestCase
                 '/api/users/2',
                 [
                     'authenticatedAs' => 1,
-                    'json' => [
+                    'json'            => [
                         'data' => [
-                            'type' => 'users',
-                            'id' => '2',
+                            'type'       => 'users',
+                            'id'         => '2',
                             'attributes' => [
                                 'email' => 'new@gmail.com',
                             ],
@@ -178,14 +178,14 @@ class DisposableEmailValidationTest extends TestCase
     public static function disposableEmailProvider(): array
     {
         // Read a sample of domains from the actual mailchecker list
-        $listFile = __DIR__ . '/../../vendor/fgribreau/mailchecker/list.txt';
+        $listFile = __DIR__.'/../../vendor/fgribreau/mailchecker/list.txt';
         $domains = file($listFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
         // Take first 10 domains from the list for testing
         $sampleDomains = array_slice($domains, 0, 10);
 
         return array_map(
-            fn($domain) => ["test@{$domain}"],
+            fn ($domain) => ["test@{$domain}"],
             $sampleDomains
         );
     }
