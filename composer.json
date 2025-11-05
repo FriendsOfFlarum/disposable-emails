@@ -44,8 +44,8 @@
                 "color": "#fff"
             }
         },
-        "flagrow": {
-            "discuss": "https://discuss.flarum.org/d/20457"
+        "branch-alias": {
+            "2.x": "2.x-dev"
         },
         "flarum-cli": {
             "modules": {
